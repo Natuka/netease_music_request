@@ -3,7 +3,7 @@ part of request;
 class Song extends Request {
   /// 获取歌曲播放链接
   Future getSongUrlByLinux(int songId, {int br = 999000}) async {
-    await Request.cookieJar;
+    await Request._cookieJar;
     var cookie =
         Request.cookieJar.loadForRequest(Uri.parse('https://music.163.com'));
     var exists = false;
